@@ -4,7 +4,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+// import { MatLabel } from '@angular/material/form-field';
 
+import {FormsModule, ReactiveFormsModule,FormGroup, FormBuilder} from '@angular/forms';
+
+import {MatInputModule} from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
@@ -13,6 +19,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +41,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule, ReactiveFormsModule,
+    MatButtonModule
+    // MatLabel
   ],
   providers: [],
   bootstrap: [AppComponent]

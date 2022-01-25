@@ -1,0 +1,52 @@
+<mat-card  class="example-card">
+    <h1>SignUp with Chip-Cart</h1>
+    <form > 
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+            <mat-label>Enter your fullname</mat-label>
+            <input matInput placeholder="eg.Chip Cart" [formControl]="fullname" required>
+            <mat-error *ngIf="fullname.invalid">{{getErrorMessageFullname()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+            <mat-label>Enter your full address</mat-label>
+            <input matInput placeholder="address" [formControl]="address" required>
+            <mat-error *ngIf="address.invalid">{{getErrorMessageAddress()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+            <mat-label>Enter your mobile number</mat-label>
+            <input matInput placeholder="eg.9876543210" [formControl]="mobile" required>
+            <mat-error *ngIf="mobile.invalid">{{getErrorMessageMobile()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput placeholder="password" [formControl]="password" required>
+            <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+            <mat-label>Confirm password</mat-label>
+            <input matInput placeholder="confirm" [formControl]="confirm" required>
+            <mat-error *ngIf="confirm.invalid">{{getErrorMessageConfirm()}}</mat-error>
+            </mat-form-field>
+            </div>
+        
+        
+        
+        <button type="submit" mat-raised-button color="primary">Sign up</button>
+        <a routerLink="/login">Have account? Login</a>
+    </form>
+</mat-card>
